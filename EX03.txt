@@ -1,0 +1,59 @@
+GameScene
+-Main Camera \
+-Re-game manager \ Button + Script_Replay
+-Background \
+-Floor \
+-Box1 \
+-Box2 \
+-Trophy \
+-Canva \
+_Re-game \
+__Text \
+-EventSystem \
+
+
+
+
+
+void Update()
+{
+	float horizontal = Input.GetAxisRaw("Horizontal");
+
+
+
+}
+
+
+
+{
+    private Rigidbody2D Rigidbody2D;
+    private float Horizontal;
+
+    void Start()
+    {
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+
+    void Update()
+    {
+        Horizontal = Input.GetAxisRaw("Horizontal");
+    }
+
+    private void FixedUpdate()
+    {
+        Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
+    }
+
+}
+
+
+
+-為物件添加物理元件完成與網頁完成版相同效果
+-添加背景音樂與按鈕點擊音效
+-上傳至 Git Hub
+-發布網頁版並取得 Git Hub Pages
+
+\ 製作並且套用 animator 的 scale如何同步
+\ 不小心拉到鏡頭導致場景物看不到，怎麼辦?
+\設定程式卻沒有反應，為甚麼?
